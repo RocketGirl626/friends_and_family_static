@@ -1,15 +1,6 @@
-require('rspec')
-require('recipe')
-require('ingredient')
-require('instruction')
-require('pg')
+ENV['RACK_ENV'] = 'test'
 
-DB = PG.connect({:dbname => 'friends_and_family_test'})
+require("bundler/setup")
+Bundler.require(:default, :test)
 
-RSpec.configure do |config|
-  config.after(:each) do
-    DB.exec("DELETE FROM recipes *;")
-    DB.exec("DELETE FROM ingredients *;")
-    DB.exec("DELETE FROM instructions *;")
-  end
-end
+Dir[File.dirname(__FILE__) + '/../lib/*.rb'].each { |file| require file }
