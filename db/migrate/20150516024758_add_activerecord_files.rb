@@ -1,9 +1,12 @@
 class AddActiverecordFiles < ActiveRecord::Migration
   def change
-  	 create_table :recipes do |t|
-      t.string :recipe_name
-      t.timestamps null: false
-    end
+  	create_table :recipes do |t|
+  		t.string :recipe_name
+  		t.string :source
+  		t.string :servings
+  		t.string :commentra
+  		t.timestamps null: false
+  	end
 
     create_table :categories do |t|
       t.string :cat_name
@@ -25,5 +28,6 @@ class AddActiverecordFiles < ActiveRecord::Migration
     	t.string :instruction_name
     	t.integer :recipe_id
     	t.timestamps null: false
+    end
   end
 end
