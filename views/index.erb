@@ -12,6 +12,7 @@
   <p> You have no recipes!</p>
 <%end%>
 
+<br /><br />
 
 <h3>Recipe Header</h3>
 
@@ -25,7 +26,7 @@
     <input id='source' name='source' type='text'>
   </div>
   <div class='form-group'>
-    <label for='servings'>Number of Servings</label>
+    <label for='servings'>Number of Servings:</label>
     <input id='servings' name='servings' type='text'>
   </div>
   <div class='form-group'>
@@ -33,4 +34,28 @@
     <input id='comment' name='comment' type='text'>
   </div>
   <button type='submit' class='btn btn-info'>Add Recipe</button>
+</form>
+
+<br /><br />
+
+<h3>Ingredients</h3>
+
+<form action='/ingredient_add' method='post'>
+  <div class='form-group'>
+    <label for='ingredient_name'>Ingredient:</label>
+    <input id='ingredient_name' name='ingredient_name' type='text'>
+  </div>
+  <button type='submit' class='btn btn-info'>Add Ingredient</button>
+</form>
+
+<br /><br />
+
+<h3>Instructions</h3>
+
+<form action='/instruction_add' method='post'>
+  <div class='form-group'>
+    <label for='instruction_name'>Instruction:</label>
+    <input id='instruction_name' name='instruction_name' type='text'>
+  </div>
+  <button type='submit' class='btn btn-info'>Add Instruction</button>
 </form>
