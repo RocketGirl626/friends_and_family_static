@@ -16,7 +16,7 @@
 
 <h3>Recipe Header</h3>
 
-<form action='/recipe_add' method='post'>
+<form action='/recipe_add/' method='post'>
   <div class='form-group'>
     <label for='recipe_name'>Recipe Name:</label>
     <input id='recipe_name' name='recipe_name' type='text'>
@@ -39,20 +39,17 @@
 <br /><br />
 
 <h3>Ingredients</h3>
-
-<form action='/ingredient_add' method='post'>
-  <div class='form-group'>
-    <label for='ingredient_name'>Ingredient:</label>
-    <input id='ingredient_name' name='ingredient_name' type='text'>
-  </div>
-  <button type='submit' class='btn btn-info'>Add Ingredient</button>
+<form action='/recipe/<%=@recipe.id()%>' method='post'>
+  <label for='ingredient_name'> Ingredient: </label>
+  <input id='ingredient_name' name='ingredient_name' type='text' </input>
+  <button type='submit' class='btn btn-success'> Add Ingredient</button>
 </form>
 
 <br /><br />
 
 <h3>Instructions</h3>
 
-<form action='/instruction_add' method='post'>
+<form action='/instruction_add/' method='post'>
   <div class='form-group'>
     <label for='instruction_name'>Instruction:</label>
     <input id='instruction_name' name='instruction_name' type='text'>
